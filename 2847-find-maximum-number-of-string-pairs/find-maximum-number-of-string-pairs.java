@@ -15,6 +15,7 @@ class Solution {
                if(ans!=st && ans.equals(words[k]))
                {
                    pairs++;
+                   break;
                    
                }
             }
