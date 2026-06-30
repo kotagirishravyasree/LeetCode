@@ -1,6 +1,7 @@
 class Solution {
     public int mostWordsFound(String[] sentences) {
-        int[] arr=new int [sentences.length];
+        int max=0;
+    //    int[] arr=new int [sentences.length];
         for(int i=0;i<sentences.length;i++)
         {
             int words=1;
@@ -12,18 +13,22 @@ class Solution {
                     words++;
                 }
             }
-            arr[i]=words;
+    //        arr[i]=words;
+            if(words>max)
+            {
+                max=words;
+            }
 
             
         }
-        int max=0;
-        for(int i=0;i<arr.length;i++)
-        {
-            if(arr[i]>max)
-            {
-                max=arr[i];
-            }
-        }
+        // int max=0;
+        // for(int i=0;i<arr.length;i++)
+        // {
+        //     if(arr[i]>max)
+        //     {
+        //         max=arr[i];
+        //     }
+        // }
         return max;
         
     }
