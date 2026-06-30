@@ -8,6 +8,10 @@ class Solution {
             String ans="";
             for(int j=n-1;j>=0;j--)
             {
+                if(st.equals("0"))
+                {
+                    break;
+                }
                 ans=ans+st.charAt(j);
             }
             for(int k=i+1;k<words.length;k++)
@@ -15,6 +19,7 @@ class Solution {
                if(ans!=st && ans.equals(words[k]))
                {
                    pairs++;
+                   words[k]="0";
                    break;
                    
                }
