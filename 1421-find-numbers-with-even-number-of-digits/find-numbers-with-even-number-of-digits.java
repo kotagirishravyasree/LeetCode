@@ -3,7 +3,7 @@ class Solution {
         int even=0;
         for(int i=0;i<nums.length;i++)
         {
-            int count=fun(nums[i]);
+            int count=digits(nums[i]);
             if(count%2==0)
             {
                 even++;
@@ -13,7 +13,7 @@ class Solution {
         return even;
         
     }
-    public static int fun(int n)
+    public static int digits(int n)
     {
         int count=0;
         while(n!=0)
