@@ -1,9 +1,9 @@
 class Solution {
     public int maximumDifference(int[] nums) {
         int max_diff=0;
+         int diff=0;
         for(int i=0;i<nums.length;i++)
         {
-            int diff=0;
             for(int j=i+1;j<nums.length;j++)
             {
                 if(nums[j]-nums[i]>diff)
