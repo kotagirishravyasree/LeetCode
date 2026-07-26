@@ -1,7 +1,7 @@
 class Solution {
     public int majorityElement(int[] nums) {
         HashMap <Integer,Integer> hm=new HashMap<>();
-        int majority=0;
+        int majority=-1;
         int half=nums.length/2;
         for(int i=0;i<nums.length;i++)
         {
@@ -12,7 +12,7 @@ class Solution {
         {
             if(hm.get(ele)>half)
             {
-                majority=ele;
+               return ele;
             }
         }
         return majority;
