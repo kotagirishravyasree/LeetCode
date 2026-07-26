@@ -1,20 +1,30 @@
 class Solution {
     public int numJewelsInStones(String jewels, String stones) {
-        int count=0;
-        for(int i=0;i<stones.length();i++)
-        {
-            char sch=stones.charAt(i);
-            for(int j=0;j<jewels.length();j++)
+          HashMap <Character,Integer> hm1=new HashMap<>();
+          HashMap <Character,Integer> hm2=new HashMap<>();
+          int ans=0;
+          for(int i=0;i<jewels.length();i++)
+          {
+            char ch=jewels.charAt(i);
+            hm1.put(ch,hm1.getOrDefault(ch,0)+1);
+          }
+          for(int i=0;i<stones.length();i++)
+          {
+            char ch=stones.charAt(i);
+            hm2.put(ch,hm2.getOrDefault(ch,0)+1);
+          }
+          for(int i=0;i<jewels.length();i++)
+          {
+            char ch=jewels.charAt(i);
+            if(hm1.containsKey(ch)&&hm2.containsKey(ch))
             {
-                char jch=jewels.charAt(j);
-                if(jch==sch)
-                {
-                    count++;
-                    break;
-                }
+                ans=ans+hm2.get(ch);
             }
-        }
-        return count;
+          }
+          return ans;
+
+
+
         
     }
 }
