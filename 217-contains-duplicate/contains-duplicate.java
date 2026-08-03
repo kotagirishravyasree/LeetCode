@@ -12,6 +12,7 @@ class Solution {
             if(hm.get(ele)>=2)
             {
                 found=true;
+                break;
             }
         }
         return found;
