@@ -14,6 +14,7 @@ class Solution {
                 if(nums[j]==ele)
                 {
                     present=true;
+                    break;
                 }
             }
             if(present==false)
