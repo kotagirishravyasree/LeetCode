@@ -5,12 +5,13 @@ class Solution {
         {
             return 0;
         }
-        while(n>999)
-        {
-            count++;
-            n--;
-        }
-        return count;
+        // while(n>999)
+        // {
+        //     count++;
+        //     n--;
+        // }
+        //return count;
+        return n-999;
 
         
     }
